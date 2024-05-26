@@ -1,13 +1,13 @@
 <div class="app">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 main-column">
                 <div class="card">
                     <div class="card-body">
                         <div class="form">
                             <div class="form-group">
                                 <label for="">Select an image</label>
-                                <input type="file" accept="image/*" class="form-control">
+                                <input type="file" accept="image/*" class="form-control" (change)="preview($event)">
                             </div>
                             <div class="form-group">
                                 <label for="">Top Text</label>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <canvas></canvas>
+                <canvas class="main-column canvas" #memeCanvas height="800" width="700"></canvas>
             </div>
         </div>
     </div>
